@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Listado</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div id="contenedor">
+		<header>
+			<h1>
+                <a href="{% url 'main' %}">
+                    {% block titulo %}
+                    Mi Blog
+			        {% endblock titulo %}
+                </a>
+			</h1>
+			<h2>Blog de Andrés Chingal hecho en Django</h2>
+		</header>
+		<section>
+		{% block contenido %}
+		{% endblock contenido %}
+		</section>
+
+		<footer>
+			(c) 2014 Andrés Chingal
+		</footer>
+	</div>
+</body>
+</html>
